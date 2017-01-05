@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.saints.working.ClientCaseFile" table="ClientCaseFile">
+		<id name="caseFileID" column="caseFileID" type="int">
+			<generator class="increment"></generator>
+		</id>
+		<property name="volunteerID" column="volunteerID" type="int"></property>
+		<property name="clientID" column="clientID" type="int"></property>
+		<property name="requestDate" column="requestDate" type="string"></property>
+		<property name="initialReqMessage" column="initialReqMessage" type="string"></property>
+		<property name="homeVisitMessage" column="homeVisitMessage" type="string"></property>
+		<property name="addMessage" column="addMessage" type="string"></property>
+		
+	</class>
+</hibernate-mapping>

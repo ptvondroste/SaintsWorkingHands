@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.saints.working.ClientProfile" table="ClientProfile">
+		<id name="clientID" column="ClientID" type="int">
+			<generator class="increment"></generator>
+		</id>
+		<property name="volunteerID" column="volunteerID" type="int"></property>
+		<property name="clientFirstName" column="clientFirstName" type="string"></property>
+		<property name="clientMidName" column="clientMidName" type="string"></property>
+		<property name="clientLastName" column="clientLastName" type="string"></property>
+		<property name="birthDate" column="birthDate" type="string"></property>
+		<property name="address" column="address" type="string"></property>
+		<property name="phoneNumber" column="phoneNumber" type="string"></property>
+		<property name="email" column="email" type="string"></property>
+	</class>
+</hibernate-mapping>
