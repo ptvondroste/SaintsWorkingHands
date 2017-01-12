@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>User Profile Form</title>
 </head>
 <body>
-
+<p>
+	<form name="Home" action="" method="post">
+	<input type="submit" value="Home">
+	</p>
 </body>
 </html>

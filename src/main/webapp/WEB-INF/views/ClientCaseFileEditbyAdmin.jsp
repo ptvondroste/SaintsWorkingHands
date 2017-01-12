@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ClientCaseFileEditbyAdmin</title>
 </head>
 <body>
-
+<h1>Client Case File Edit by Admin</h1>
+<p>
+	<form name="Home" action="" method="post">
+	<input type="submit" value="Home">
+	</p>
 </body>
 </html>

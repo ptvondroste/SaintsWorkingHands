@@ -6,9 +6,25 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Home Page! 
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
+<P>
+<form name="Login" action="Login" method="post">
+<input type="submit" value="Login">
+</form>
+<br>
+<form name="ClientCaseEntryForm" action="ClientCaseEntryForm" method="post">
+<input type="submit" value="Client Case Entry Form">
+<br>
+<form name="ClientProfileForm" action="ClientProfileForm" method="post">
+<input type="submit" value="Client Profile Form">
+<br>
+<form name="ClientCaseFiles" action="ClientCaseFiles" method="post">
+<input type="submit" value="Client Case Files">
+<br>
+<form name="ClientCaseFilesEditbyUser" action="ClientCaseFilesEditbyUser" method="post">
+<input type="submit" value="Client Case Files Edit by User">
+</P>
 </body>
 </html>
