@@ -14,10 +14,64 @@
 
 		<br>First Name: <input type="text" name="firstName"> 
 		<br>Last Name: <input type="text" name="lastName"> 
-		<br>Birthdate: <input type="text" name="birthDate">
+		<br>Birthdate: <input type="date" name="birthDate">
 		<br>Address: <input type="text" name="address"> 
+		<br>State: <select name="State">
+    <option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+  </select>
+  Zip Code: <input type="text" name="zipCode">
 		<br>Phone Number: <input type="text" name="phoneNumber"> 
-		<br> <br> <input type="submit" value="Login">
+		<br> <br> <input type="submit" value="Input Client">
 	</form>
 	</p>
 	<p>
@@ -29,15 +83,13 @@
 
 			var firstName = document.forms["ClientCaseEntryForm"]["firstName"].value;
 			var lastName = document.forms["ClientCaseEntryForm"]["lastName"].value;
-			var birthDate = document.forms["ClientCaseEntryForm"]["birthDate"].value;
 			var address = document.forms["ClientCaseEntryForm"]["address"].value;
-			//Need to add validation for address
 			var phoneNumber = document.forms["ClientCaseEntryForm"]["phoneNumber"].value;
 
 			var letters = /^[A-Za-z\s]+$/;
 			var phoneVal = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-			var birthDateVal = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/
-
+			var zipVal = /^\d{5}(-\d{4})?$/;
+			
 			if (firstName.length < 2) {
 				alert("First name is too short!");
 				return false;
@@ -58,8 +110,8 @@
 				return false;
 			}
 			
-			if (birthDateVal.test(birthDate) == false) {
-				alert("Not a valid date! Please enter Birthdate!")
+			if (zipVal.test(zipCode) === false) {
+				alert("Zip Code is not valid!");
 			}
 			
 			if (phoneNumber.value.match(phoneVal) == false) {
